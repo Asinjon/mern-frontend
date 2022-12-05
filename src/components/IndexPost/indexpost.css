@@ -1,0 +1,109 @@
+article.post {
+    width: 658px;
+    background-color: #fff;
+    padding: 20px 0px;
+    box-shadow: 0 0 1.25rem 0 rgb(0 0 0 / 10%);
+    border-radius: 5px;
+}
+article.post .post__container {
+    width: 618.67px;
+    margin: 0 auto;
+}
+.post__header {
+    display: flex;
+    gap: 20px;
+    height: 52.84px;
+}
+.post__header .user__img img{
+    width: 52.84px;
+    height: 52.84px;
+    border-radius: 50%;
+}
+.post__header .title {
+    display: flex;
+    gap: 307.46px;
+    width: fit-content;
+}
+.post__header .title .title__content a{
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10px;
+}
+.post__header .title .title__content span{
+    display: inline-block;
+}
+.post__header .title .title__menu {
+    cursor: pointer;
+    height: 22px;
+}
+.post__content .description {
+    margin-top: 20px;
+    margin-bottom: 16px;
+}
+.post__content .image img {
+    height: 399.79px;
+    width: 100%;
+}
+.post__content .likes {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 26.27px;
+    display: flex;
+    justify-content: space-between;
+}
+.post__content .likes .count {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.post__content .likes .count span{
+    line-height: 1;
+}
+.post__content .likes .count span.like__btn{
+    cursor: pointer;
+}
+.post__content .comments a {
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+}
+.post__content .add__comment {
+    margin-top: 20px;
+    position: relative;
+}
+.post__content .add__comment input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding-right: 130px;
+    padding-left: 12px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    -webkit-border-radius: 5px !important;
+    border-radius: 5px !important;
+    font-weight: 400;
+    line-height: 1.8;
+    color: #777d74;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-transition: border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    -o-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+.post__content .add__comment button {
+    padding: 10px;
+    border: none;
+    background-color: #50b5ff;
+    color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 15px;
+    cursor: pointer;
+}

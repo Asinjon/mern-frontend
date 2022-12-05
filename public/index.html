@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/assets/images/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+   <link rel="stylesheet" href="style.css">
+   <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <title>SocialV</title>
+  </head>
+  <body>
+    
+    <div id="root"></div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="assets/js/libs.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script type="module">
+      import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
+      var swiper = new Swiper(".slider__content", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 1000,
+          disableOnInteraction: false,
+        }
+      });
+    </script>
+  </body>
+</html>

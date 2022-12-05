@@ -1,0 +1,50 @@
+.noFriends {
+    font-size: 18px;
+    color: #50B5FF;
+}
+.right__sidebar {
+    width: 200px;
+    background-color: #fff;
+    top: 75px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 0 1.25rem 0 rgb(0 0 0 / 10%);
+    position: fixed;
+    z-index: 2;
+    height: 100%;
+    right: 5px;
+}
+.right__sidebar .users {
+    margin-top: 15.008px;
+    width: 170px;
+}
+.right__sidebar .users li{
+    list-style: none;
+    margin-bottom: 25px;
+}
+.right__sidebar .users li a {
+    text-decoration: none;
+}
+.right__sidebar .users li a .user {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    transition: background .2s ease;
+}
+.right__sidebar .users li a .user:hover {
+    background: rgba(0, 0, 0, .03);
+}
+.right__sidebar .users li img {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+}
+.right__sidebar .users li p {
+    width: 87.95px;
+    font-size: 12px;
+    color: #4F414D;
+    font-weight: 400;
+}
+.right__sidebar .users li p span {
+    display: block;
+}

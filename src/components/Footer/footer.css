@@ -1,0 +1,30 @@
+footer {
+    margin: 0 auto;
+    width: 100%;
+    background-color: #fff;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.footer__container {
+    width: 947px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 26px;
+}
+.footer__container .terms {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding-left: 20px;
+}
+.footer__container .terms a {
+    text-decoration: none;
+    color: #777d77;
+    transition: color .3s ease;
+}
+.footer__container .terms a:hover {
+    color: #50b5ff;
+}

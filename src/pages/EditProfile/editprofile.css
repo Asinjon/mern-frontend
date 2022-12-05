@@ -1,0 +1,360 @@
+main {
+    min-height: 100vh;
+    padding: 91px 16px 0 16px;
+    display: flex;
+    justify-content: center;
+}
+select {
+    padding: 6px 36px 6px 12px;
+    width: 100% !important; 
+    height: 40px;
+}
+.actions button {
+    cursor: pointer;
+}
+.main__container {
+    width: 1000px;
+}
+.main__container .tabs {
+    margin-bottom: 16px;
+    background-color: white;
+    box-shadow: 0 0 1.25rem 0 rgb(0 0 0 / 10%);
+}
+.tabs ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tabs ul li {
+    width: 50%;
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+}
+.tabs ul li p {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    display: inline-block;
+    text-align: center;
+    transition: background-color .15s ease;
+}
+.tabs ul li p:hover:not(.tabs ul li p.active) {
+    background-color: rgba(0, 0, 0, 0.025);
+}
+.tabs ul li p.active {
+    color: #fff;
+    background: #50b5ff;
+}
+.tabs ul li:first-child p {
+    padding: 20px 165.365px;
+    border-radius: 5px 0 0 5px;
+}
+.tabs ul li:last-child p {
+    padding: 20px 177.72px;
+    border-radius: 0 5px 5px 0;
+}
+.main__container .tabs__content {
+    background-color: white !important;
+    box-shadow: 0 0 1.25rem 0 rgb(0 0 0 / 10%) !important;
+    border-radius: 5px !important;
+    margin-bottom: 15px !important;
+    padding-bottom: 0 !important;
+}
+.tabs__content .card {
+    margin-bottom: 16px;
+}
+.tabs__content .card__container {
+    width: 960px;
+    margin: 0 auto;
+}
+.tabs__content .card__container.password {
+    width: 940px;
+    margin: 0 auto;
+}
+.tabs__content .card__header {
+    margin-bottom: 20px;
+    padding: 15.008px 20px;
+    border: 0;
+    border-bottom: 1px solid #f1f1f1;
+}
+.tabs__content .card__header h3 {
+    font-size: 19.6px;
+}
+.card__content .image__profile {
+    margin-bottom: 20px;
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+.card__content .image__profile img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
+.card__content .image__profile .upload {
+    position: absolute;
+    top: 100px;
+    left: 110px;
+}
+.card__content .image__profile .upload img {
+    width: 22px;
+    height: 22px;
+    background: #50b5ff;
+    cursor: pointer;
+    padding: 8px;
+}
+.card__content .image__editor {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    border-radius: 8px;
+    background: #50b5ff;
+    height: fit-content;
+    opacity: 0;
+    top: -200%;
+    transform: translate(-50%, -50%) scale(.5);
+    transition: opacity .3s ease-in-out, top .1s ease-in-out, transform 1s ease-in-out;
+}
+.card__content .image__editor.active {
+    opacity: 1;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform .3s cubic-bezier(.18, .89, .43, 1.19);
+}
+.image__editor .header {
+    border-bottom: 1px solid #e5e5e5;
+    padding: 14.5px 0;
+}
+.image__editor .header .header__container {
+    max-width: 94%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.image__editor .header__container .title {
+    width: 88%;
+    text-align: center;
+}
+.image__editor .header__container .title h2{
+    font-size: 20px;
+    margin-right: -20%;
+    color: #fff;
+}
+.image__editor .header__container .close {
+    width: 12%;
+    display: flex;
+    justify-content: end;
+}
+.image__editor .header__container .close .btn{
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 1);
+    cursor: pointer;
+    transition: background .15s ease;
+    border-radius: 50%;
+    position: relative;
+}
+.image__editor .header__container .close .btn:hover{
+    background: rgba(228, 230, 235, 1);
+}
+.image__editor .header__container .close .btn span{
+    width: 75%;
+    height: 2px;
+    background: #50b5ff;
+    position: absolute;
+    left: 4px;
+    top: 16px;
+}
+.image__editor .header__container .close .btn span:first-child{
+    transform: rotate(45deg);
+}
+.image__editor .header__container .close .btn span:last-child{
+    transform: rotate(-45deg);
+}
+.image__editor .content {
+    border-bottom: 1px solid #e5e5e5;
+    padding: 8px 0;
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    width: 100%;
+}
+.image__editor .content .image__resize {
+    width: 452px;
+    margin: 0 auto;
+    height: 300px;
+    position: relative;
+}
+.image__editor .content .image__resize .layer{
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background-color: rgba(20, 20, 20, 0.6);
+}
+.image__editor .content .image__resize .pictures{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 452px;
+    height: 300px;
+}
+.image__editor .content .image__resize .pictures .canvas{
+    position: absolute;
+    top: 0;
+    left: 80px;
+    border-radius: 50%;
+    background:rgba(255, 255, 255, .3);
+    cursor: move;
+}
+.image__editor .actions {
+    padding: 14.5px 0;
+}
+.image__editor .actions label{
+    margin: 0 auto;
+    border: none;
+    font-size: 16px;
+    color: #1879f2;
+    padding: 9px 108.5px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #fff;
+}
+.image__editor .actions label span{
+    margin-right: 5px;
+}
+.image__editor .actions input{
+    display: none;
+}
+.row1,.row2,.row3,.row4,.row5 {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    width: 969px;
+}
+.row3 .input .male__female {
+    line-height: 1;
+}
+.row3 .input .male__female input {
+    width: fit-content !important;
+    height: fit-content !important;
+    padding: 7px !important;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 15px !important;
+    vertical-align: middle;
+}
+.row3 .input .male__female .input:checked {
+    background-color: #50b5ff;
+    border-color: #50b5ff;
+}
+.card__content .input {
+    width: 472px;
+    margin-bottom: 20px;
+}
+.card__content .newpassword.input {
+    width: 100%;
+}
+.card__content .newpassword.input input{
+    width: 918px;
+}
+.card__content .newpassword.input p{
+    display: flex;
+    justify-content: space-between;
+}
+.card__content .newpassword.input a.forgot{
+    text-decoration: none;
+    color: #50b5ff;
+}
+.card__content .input label,
+.card__content .address label {
+    margin-bottom: 8px;
+    display: inline-block;
+}
+.card__content .input 
+.card__content .input input {
+    width: 418px !important;
+    height: 25.198px !important;
+}
+    
+.card__content .input input:focus {
+    color: #777d74;
+    background-color: #fff;
+    border-color: #a8daff;
+    outline: 0;
+    -webkit-box-shadow: 0 0.125rem 0.25 0 rgba(80, 181, 255, 0.15);
+    box-shadow: 0 0.125rem 0.25 0 rgba(80, 181, 255, 0.15);
+}
+.card__content .input input::-webkit-date-and-time-value {
+    height: 25.2px;
+}
+.card__content .input input::-webkit-input-placeholder {
+    color: #777d74;
+    opacity: 1;
+}
+.card__content .input input::-moz-placeholder {
+    color: #777d74;
+    opacity: 1;
+}
+.card__content .input input::-ms-input-placeholder {
+    color: #777d74;
+    opacity: 1;
+}
+.card__content .input input::placeholder {
+    color: #777d74;
+    opacity: 1;
+}
+.card__content .input input:disabled,
+.card__content .input input[readonly] {
+    background-color: #e9ecef;
+    opacity: 1;
+}
+.card__content .address {
+    margin-bottom: 20px;
+}
+.card__content .address textarea{
+    width: 910px;
+    height: 110px;
+}
+.tabs__content .actions .card__container {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    padding-bottom: 20px;
+}
+.tabs__content .actions .card__container button {
+    text-decoration: none;
+    display: inline-block;
+    padding: 6px 12px;
+    font-weight: 400;
+    line-height: 1.8;
+    border: 1px solid transparent;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+
+}
+.tabs__content .actions .card__container button:first-child{
+    color: #fff;
+    background-color: #50b5ff;
+    border-color: #50b5ff;
+}
+.tabs__content .actions .card__container button:first-child:hover {
+    background-color: rgba(80, 181, 255, .85);
+}
+.tabs__content .actions .card__container button:last-child {
+    color: #e68c7c;
+    background-color: rgba(255, 155, 138, 0.2);
+}
+.tabs__content .actions .card__container button:last-child:hover {
+    background-color: rgba(255, 155, 138, .35);;
+}
+.main__container .tabs__content .tabs__content-wrapper:last-child {
+    width: 940px;
+}

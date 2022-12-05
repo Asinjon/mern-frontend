@@ -1,0 +1,20 @@
+main {
+    min-height: 100vh;
+    padding: 91px 16px 0 16px;
+    display: flex;
+    justify-content: center;
+}
+.main__container {
+    width: 1000px;
+    display: flex !important;
+    justify-content: center !important;
+}
+.main__container .posts {
+    width: 658.67px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.main__container aside {
+    width: 325.32px;
+}
