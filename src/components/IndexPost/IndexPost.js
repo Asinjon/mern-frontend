@@ -126,7 +126,7 @@ const IndexPost = ({isFriendsProfile, isStrangersProfile, stranger}) => {
                                 </div>
                                 <div className="title">
                                     <div className="title__content">
-                                        <span href="#">{friendPost.creatorUsername}</span>
+                                        <span>{friendPost.creatorUsername}</span>
                                         <p>{format(friendPost.createdAt)}</p>
                                     </div>
                                 </div>
