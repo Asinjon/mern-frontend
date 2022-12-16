@@ -8,6 +8,9 @@ import {format} from "timeago.js";
 import {imageWithCapitalExt} from "../../api.js";
 
 const IndexPost = ({isFriendsProfile, isStrangersProfile, stranger}) => {
+    console.log("isFriendsProfile:", isFriendsProfile);
+    console.log("isStrangersProfile:", isStrangersProfile);
+    console.log("stranger:", stranger);
     const {isCreated} = useContext(AuthContext);
     const {user} = useContext(AuthContext);
 
@@ -172,6 +175,7 @@ const IndexPost = ({isFriendsProfile, isStrangersProfile, stranger}) => {
             <div className="post__container">
                 <div className="post__header">
                     <div className="user__img">
+                        {console.log("user.profile_img:", profile_img)}
                         <img src={user?.profile_img === "noAvatar-big.png" ? (public_folder + user?.profile_img) : (public_folder + "users/" + user?.profile_img)} alt="Post" />
                     </div>
                     <div className="title">
