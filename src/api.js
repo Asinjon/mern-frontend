@@ -80,9 +80,9 @@ export const requestFriend = async (datas, userId, dispatch) => {
     }
 };
 
-export const receiveInvitation = async (strangerId, userId) => {
+export const receiveInvitation = async (strangerId, userDataId userId) => {
     try {
-        const response = await axios.post(`${MAIN_URL}/api/submit/friend`, {friendId:strangerId, userId});
+        const response = await axios.post(`${MAIN_URL}/api/submit/friend`, {friendId:strangerId, userDataId, userId});
         return response.data;
     } catch (error) {
         console.log("error in receiveInvitation():::", error);
