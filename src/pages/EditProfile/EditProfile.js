@@ -308,7 +308,7 @@ const EditProfile = () => {
                                         <div className="card__container">
                                                 <div className="image__profile">
                                                     <img src={
-                                                        user?.profile_img === "/noAvatar-big.png" 
+                                                        user?.profile_img === "noAvatar-big.png" 
                                                         ? (public_folder + user?.profile_img) 
                                                         : (public_folder + "users/" + imageWithCapitalExt(user?.profile_img))} 
                                                         alt="Profile" />
