@@ -18,7 +18,7 @@ export const AuthReducer = (state, action) => {
             };
         case "SIGNOUT":
             console.log("User has logged out");
-            return {user: null, isLogged: false, userDataId: "12345"};
+            return {...state, user: null, isLogged: false};
         case "UPLOAD":
             console.log("USER IN AUTHREDUCER:", action.payload.user);
             return {...state, user: action.payload.user, userDataId: action.payload.userDataId};
