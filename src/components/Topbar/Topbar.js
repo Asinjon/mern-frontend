@@ -136,7 +136,7 @@ function Topbar () {
     }
 
     const confirm = async (strangerId, userId) => {
-        const response = await receiveInvitation(strangerId, userId);
+        const response = await receiveInvitation(strangerId, userDataId, userId);
         dispatch({type: "UPLOAD", payload: {user: response}});
         window.location.reload();
     };
@@ -223,7 +223,7 @@ function Topbar () {
                                     <div className={state.requests.isShow ? "active card" : "card"}>
                                         <div className="card__header">
                                             <h3>Friend Request</h3>
-                                            <small>{user !== undefined && user !== null && user.invitations.length}</small>
+                                            <small>{user ?? user.invitations.length}</small>
                                         </div>
                                         <div className="card__content">
                                             {userInvitations !== undefined 
