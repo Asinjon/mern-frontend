@@ -19,7 +19,7 @@ function App() {
   useEffect(() => {
       const getUser = async () => {
         try {
-          const result = await axios.post(`${MAIN_URL}/api/auth/signin/user`);
+          const result = await axios.post(`${MAIN_URL}/api/auth/signin/user`, {userDataId});
           console.log("result::", JSON.stringify(result));
           if (result.data.isLogged === true) {
             dispatch({type:"SIGNIN", payload: {
