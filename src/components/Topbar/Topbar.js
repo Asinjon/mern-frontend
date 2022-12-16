@@ -223,7 +223,7 @@ function Topbar () {
                                     <div className={state.requests.isShow ? "active card" : "card"}>
                                         <div className="card__header">
                                             <h3>Friend Request</h3>
-                                            <small>{user ?? user.invitations.length}</small>
+                                            <small>{user !== null && user !== undefined && user.invitations.length}</small>
                                         </div>
                                         <div className="card__content">
                                             {userInvitations !== undefined 
