@@ -172,11 +172,12 @@ const IndexPost = ({isFriendsProfile, isStrangersProfile, stranger}) => {
             <div className="post__container">
                 <div className="post__header">
                     <div className="user__img">
-                        <img src={user?.profile_img === "/noAvatar-big.png" ? (public_folder + user?.profile_img) : (public_folder + "users/" + user?.profile_img)} alt="Post" />
+                        <img src={user?.profile_img === "noAvatar-big.png" ? (public_folder + user?.profile_img) : (public_folder + "users/" + user?.profile_img)} alt="Post" />
                     </div>
                     <div className="title">
                         <div className="title__content">
                             <a href="#">{post.creatorUsername}</a>
+                            {console.log("format(post.createdAt):", format(post.createdAt))}
                             <p>{format(post.createdAt)}</p>
                         </div>
                     </div>
