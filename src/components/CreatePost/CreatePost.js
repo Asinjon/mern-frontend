@@ -77,7 +77,7 @@ const CreatePost = () => {
                 </div>
                 <div className="content">
                     <div className="user__input">
-                        <img src={user?.profile_img === "/noAvatar-big.png" ? (public_folder + user?.profile_img) : (public_folder + "users/" + imageWithCapitalExt(user?.profile_img))} alt="User" className="user__img" />
+                        <img src={user?.profile_img === "noAvatar-big.png" ? (public_folder + user?.profile_img) : (public_folder + "users/" + imageWithCapitalExt(user?.profile_img))} alt="User" className="user__img" />
                         <div className="input">
                             <input ref={inputRef} onClick={clickHandler} type="text" id="clickHandler" placeholder="Write something here"/>
                         </div>
@@ -93,7 +93,7 @@ const CreatePost = () => {
                     </div>
                     <div className="content">
                         <div className="user__input">
-                            <img src={user?.profile_img === "/noAvatar-big.png" ? (public_folder + user?.profile_img) : (public_folder + "users/" + imageWithCapitalExt(user?.profile_img))} alt="User" className="user__img" />
+                            <img src={user?.profile_img === "noAvatar-big.png" ? (public_folder + user?.profile_img) : (public_folder + "users/" + imageWithCapitalExt(user?.profile_img))} alt="User" className="user__img" />
                             <div className="input">
                                 <input value={text} onChange={(e) => setText(e.target.value)} type="text" placeholder="Write something here"/>
                             </div>
