@@ -15,9 +15,9 @@ export const signUp = async (username, email, password, setInputErrors, setAuthE
     }
 }
 
-export const signIn = async(email, password, dispatch, setInputErrors, setAuthError) => {
+export const signIn = async(email, password, dispatch, setInputErrors, setAuthError, userDataId) => {
     try {
-        const data = await axios.post(`${MAIN_URL}/api/auth/signin`, {email, password});
+        const data = await axios.post(`${MAIN_URL}/api/auth/signin`, {email, userDataId, password});
         console.log("DATA:", data.data.data);
         if (data.data.inputError) {
             setInputErrors({username:data.data.username, email:data.data.email, password:data.data.password})
