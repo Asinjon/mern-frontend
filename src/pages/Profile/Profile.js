@@ -122,7 +122,7 @@ const Profile = () => {
                         </div>
                         <div className="user__img">
                             <img src={Object.keys(mainUser).length > 0 ?
-                                        mainUser?.profile_img === "/noAvatar-big.png" 
+                                        mainUser?.profile_img === "noAvatar-big.png" 
                                         ? (public_folder + mainUser?.profile_img) 
                                         : (public_folder + "users/" + imageWithCapitalExt(mainUser?.profile_img))
                                     : ""}  alt="User" />
