@@ -309,7 +309,7 @@ function Topbar () {
                                 </li> */}
                                 <li ref={profileRef} className="user__profile">
                                     <button type="button" className="user__profile-link" onClick={handleClick}>
-                                        <img className="user__profile-img" src={user?.profile_img === "/noAvatar-big.png" ? (public_folder + user?.profile_img) : (public_folder + "users/" + imageWithCapitalExt(user?.profile_img))} alt="User" />
+                                        <img className="user__profile-img" src={user?.profile_img === "noAvatar-big.png" ? (public_folder + user?.profile_img) : (public_folder + "users/" + imageWithCapitalExt(user?.profile_img))} alt="User" />
                                         <span className="username">{user?.username}</span>
                                     </button>
                                     <div className={state.profile.isShow ? "active card" : "card"}>
