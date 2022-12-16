@@ -220,7 +220,7 @@ const IndexPost = ({isFriendsProfile, isStrangersProfile, stranger}) => {
             <div className="post__container">
                 <div className="post__header">
                     <div className="user__img">
-                        <img src={stranger?.profile_img === "/noAvatar-big.png" ? (public_folder + stranger?.profile_img) : (public_folder + "users/" + stranger?.profile_img)} alt="Post" />
+                        <img src={stranger?.profile_img === "noAvatar-big.png" ? (public_folder + stranger?.profile_img) : (public_folder + "users/" + stranger?.profile_img)} alt="Post" />
                     </div>
                     <div className="title">
                         <div className="title__content">
