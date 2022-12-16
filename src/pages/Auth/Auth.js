@@ -31,7 +31,7 @@ const Auth = ({type}) => {
             signUp(username.current.value, email.current.value, password.current.value, setInputErrors, setAuthError);
             navigate("/confirm");
         } else {
-            signIn(email.current.value, password.current.value, dispatch, setInputErrors, setAuthError);
+            signIn(email.current.value, password.current.value, dispatch, setInputErrors, setAuthError, userDataId);
         }
     }
     return (
